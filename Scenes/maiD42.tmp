@@ -27,6 +27,8 @@ position = Vector2(230, 210)
 
 [node name="Node2D2" parent="." instance=ExtResource("4_oto1o")]
 position = Vector2(349, 185)
+speed = null
+point = null
 
 [node name="box" parent="." instance=ExtResource("5_jsw6d")]
-position = Vector2(257, 155)
+position = Vector2(273, 172)
