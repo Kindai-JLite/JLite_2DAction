@@ -29,4 +29,4 @@ position = Vector2(230, 210)
 position = Vector2(349, 185)
 
 [node name="box" parent="." instance=ExtResource("5_jsw6d")]
-position = Vector2(257, 155)
+position = Vector2(273, 172)
