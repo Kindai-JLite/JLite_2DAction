@@ -1,9 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://uid47sglwxih"]
 
+
 [ext_resource type="TileSet" uid="uid://b5ikiic18qon3" path="res://debug_tile_set.tres" id="1_618jo"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_gitj8"]
 [ext_resource type="PackedScene" uid="uid://ctp08mxjia63v" path="res://Scenes/player.tscn" id="2_d8n0g"]
 [ext_resource type="PackedScene" uid="uid://b7kccbfc2gwk6" path="res://Scenes/mob.tscn" id="3_jvu3b"]
+[ext_resource type="PackedScene" uid="uid://hbr33c7s321y" path="res://Scenes/kinoko.tscn" id="4_oto1o"]
+[ext_resource type="PackedScene" uid="uid://14yp8yisj2if" path="res://Scenes/box.tscn" id="5_jsw6d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gitj8")
@@ -18,3 +21,18 @@ position = Vector2(76, 172)
 
 [node name="Mob" parent="." instance=ExtResource("3_jvu3b")]
 position = Vector2(124, 198)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Item" parent="." instance=ExtResource("3_34qq2")]
+position = Vector2(176, 210)
+rotation = 0.0321499
+
+[node name="Item2" parent="." instance=ExtResource("3_34qq2")]
+position = Vector2(230, 210)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_oto1o")]
+position = Vector2(349, 185)
+
+[node name="box" parent="." instance=ExtResource("5_jsw6d")]
+position = Vector2(257, 155)
