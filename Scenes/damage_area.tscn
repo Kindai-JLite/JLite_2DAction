@@ -1,11 +1,29 @@
 [gd_scene load_steps=3 format=3 uid="uid://th7d4omue85t"]
 
-[ext_resource type="Script" path="res://damagearea.gd" id="1_2q5e7"]
+[sub_resource type="GDScript" id="GDScript_rvhyv"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		get_parent().game_over()
+
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8o28u"]
 
 [node name="DamageArea" type="Area2D"]
-script = ExtResource("1_2q5e7")
+script = SubResource("GDScript_rvhyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8o28u")
