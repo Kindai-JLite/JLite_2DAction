@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b00sj4mupf5iv"]
 
 [ext_resource type="Texture2D" uid="uid://hqk7dq80xr7x" path="res://Sprites/shiitake.png" id="1_5cdw3"]
-[ext_resource type="Script" path="res://kinoko.gd" id="1_srk2c"]
+[ext_resource type="Script" path="res://Scripts/kinoko.gd" id="1_srk2c"]
 
 [sub_resource type="Animation" id="Animation_tv5aw"]
 resource_name = "hit"
