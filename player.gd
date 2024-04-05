@@ -32,5 +32,3 @@ func _physics_process(delta):
 			sprite.play("fall")
 			
 	move_and_slide()
-
-

@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://budmjeew0o6np"]
+
+[ext_resource type="Texture2D" uid="uid://bi2ui0rektigm" path="res://Sprites/スクリーンショット 2023-12-14 182607.png" id="1_w81bk"]
+[ext_resource type="Script" path="res://Scripts/box.gd" id="1_xp7uj"]
+[ext_resource type="Texture2D" uid="uid://t3orr0a7qhi8" path="res://Sprites/スクリーンショット 2023-12-14 182733.png" id="2_3w0ms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66cnf"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvlx4"]
+size = Vector2(16, 1.625)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h58lf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w81bk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3w0ms")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}]
+
+[node name="box" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+lock_rotation = true
+freeze = true
+script = ExtResource("1_xp7uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_66cnf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8.1875)
+shape = SubResource("RectangleShape2D_mvlx4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.02, 0.02)
+sprite_frames = SubResource("SpriteFrames_h58lf")
+autoplay = "default"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -46)
+
+[connection signal="body_entered" from="." to="AnimatedSprite2D" method="_on_box_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
