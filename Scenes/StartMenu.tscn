@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7a4i0ux3lf1u"]
 
-[ext_resource type="Script" path="res://Scenes/StartMenu.gd" id="1_kv7k8"]
+[ext_resource type="Script" path="res://Scripts/StartMenu.gd" id="1_kdirk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r375w"]
 font_size = 32
@@ -16,7 +16,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kv7k8")
+script = ExtResource("1_kdirk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

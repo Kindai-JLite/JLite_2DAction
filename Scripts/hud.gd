@@ -10,8 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func update_score(n):
+func display_score(n):
 	$ScoreLabel/number.text = str(n)
 	
-func update_best_score(n):
+func display_best_score(n):
 	$BestScoreLabel/number.text = str(n)

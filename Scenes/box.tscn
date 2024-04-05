@@ -1,15 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://14yp8yisj2if"]
+[gd_scene load_steps=7 format=3 uid="uid://budmjeew0o6np"]
 
 [ext_resource type="Texture2D" uid="uid://bi2ui0rektigm" path="res://Sprites/スクリーンショット 2023-12-14 182607.png" id="1_w81bk"]
 [ext_resource type="Script" path="res://Scripts/box.gd" id="1_xp7uj"]
 [ext_resource type="Texture2D" uid="uid://t3orr0a7qhi8" path="res://Sprites/スクリーンショット 2023-12-14 182733.png" id="2_3w0ms"]
-[ext_resource type="PackedScene" uid="uid://hbr33c7s321y" path="res://Scenes/kinoko.tscn" id="2_hgdht"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66cnf"]
-size = Vector2(34, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvlx4"]
-size = Vector2(34, 8.5)
+size = Vector2(16, 1.625)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h58lf"]
 animations = [{
@@ -36,30 +35,18 @@ collision_mask = 3
 lock_rotation = true
 freeze = true
 script = ExtResource("1_xp7uj")
-item_scene = ExtResource("2_hgdht")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 14.0
-offset_right = 56.0
-offset_bottom = 40.0
-text = "100"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_66cnf")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 13.75)
+position = Vector2(0, 8.1875)
 shape = SubResource("RectangleShape2D_mvlx4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.75, -1)
-scale = Vector2(0.043, 0.04)
+scale = Vector2(0.02, 0.02)
 sprite_frames = SubResource("SpriteFrames_h58lf")
 autoplay = "default"
 

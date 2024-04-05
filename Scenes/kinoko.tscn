@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://hbr33c7s321y"]
+[gd_scene load_steps=8 format=3 uid="uid://b00sj4mupf5iv"]
 
 [ext_resource type="Texture2D" uid="uid://hqk7dq80xr7x" path="res://Sprites/shiitake.png" id="1_5cdw3"]
 [ext_resource type="Script" path="res://kinoko.gd" id="1_srk2c"]
@@ -13,7 +13,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]

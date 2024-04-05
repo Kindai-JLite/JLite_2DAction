@@ -1,6 +1,5 @@
 extends RigidBody2D
 @onready var sprite = $AnimatedSprite2D # AnimatedSprite ノードの参照
-@onready var label = $Label # Label ノードの参照
 @export var item_scene: PackedScene
 var empty = false
 	
@@ -25,10 +24,12 @@ func _on_area_2d_body_exited(body):
 		sprite.play("empty")
 		# この「Item」ノードを開放する（消す）
 		
-		if not empty:
+		if not empty and item_scene != null:
 			var item = item_scene.instantiate()
 			item.position = $Marker2D.global_position
 			get_parent().add_child(item)
+		
+		empty = true
 		# Replace with function body. # Replace with function body.
 
 
